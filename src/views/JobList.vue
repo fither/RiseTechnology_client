@@ -45,6 +45,18 @@
           Create
         </a>
       </div>
+      <div
+        v-if="formResults.length" 
+        class="d-block"
+      >
+        <p
+          v-for="(result, index) in formResults"
+          :key="index"
+        >
+          {{ result }}
+        </p>
+
+      </div>
     </div>
     <div class="row job-list mt-4">
       <h4>
@@ -191,12 +203,12 @@ export default class JobList extends Vue {
   }
 
   edit(job: Job): void {
-    this.editJob = job;
+    Object.assign(this.editJob, job);
     this.isEditModalOpen = true;
   }
 
   remove(job: Job): void {
-    this.removeJob = job;
+    Object.assign(this.removeJob, job);
     this.isQuestionModalOpen = true;
   }
 
@@ -391,6 +403,11 @@ export default class JobList extends Vue {
   .row {
     justify-content: center;
     align-items: center;
+  }
+
+  p {
+    text-align: left;
+    margin-bottom: .25rem;
   }
 
 </style>
