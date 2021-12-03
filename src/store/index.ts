@@ -25,9 +25,9 @@ export default new Vuex.Store({
     },
     setPriorityOptions(state) {
       state.priorityOptions = [
-        { value: 0, text: 'Normal'},
-        { value: 1, text: 'Öncelikli'},
-        { value: 2, text: 'Acil' }
+        { value: 0, text: 'Regular'},
+        { value: 1, text: 'Trivial'},
+        { value: 2, text: 'Urgent' }
       ]
     }
   },
