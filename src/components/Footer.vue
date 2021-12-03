@@ -2,7 +2,7 @@
   <div id="footer">
     <span class="d-flex align-items-center">
       <i class="fab fa-git"></i>
-      <a href="#">Repository</a>
+      <a href="https://github.com/fither/RiseTechnology_client">Repository</a>
     </span>
     <span class="copyright">
       &copy;
