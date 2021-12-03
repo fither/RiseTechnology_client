@@ -118,18 +118,23 @@
                 class="col col-12 col-md-2"
                 style="white-space: nowrap;"
               >
-                <a
-                  class="btn bg-gray"
-                  @click="edit(job)"
-                >
-                  <i class="far fa-edit"></i>
-                </a>
-                <a
-                  @click="remove(job)"
-                  class="btn bg-gray ml-1"
-                >
-                  <i class="fas fa-trash"></i>
-                </a>
+                <div class="mobile-title d-flex d-md-none">
+                  Action
+                </div>
+                <div>
+                  <a
+                    class="btn bg-gray"
+                    @click="edit(job)"
+                  >
+                    <i class="far fa-edit"></i>
+                  </a>
+                  <a
+                    @click="remove(job)"
+                    class="btn bg-gray ml-1"
+                  >
+                    <i class="fas fa-trash"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

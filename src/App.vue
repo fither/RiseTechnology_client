@@ -35,7 +35,7 @@
     width: 100%;
   }
 
-  @screen (max-width: 768px) {
+  @media (max-width: 768px) {
     #app {
       margin: 0;
     }

@@ -89,6 +89,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
   .question-modal .card {
     width: 50%;
     height: auto;
+    min-width: 350px;
   }
 
   .card-title {

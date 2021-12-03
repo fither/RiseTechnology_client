@@ -34,6 +34,7 @@ export default new Vuex.Store({
   actions: {
     async init({ commit }) {
       commit('setPriorityOptions');
+      axios.defaults.baseURL = process.env.NODE_ENV === 'production' ? 'https://rise-technology-server.herokuapp.com' : 'http://localhost:5000' 
     },
     async getJobs({ commit }) {
       const localItems = window.localStorage.getItem('jobList');
@@ -41,7 +42,7 @@ export default new Vuex.Store({
       if(localItems !== null) {
         items = JSON.parse(localItems);
       } else {
-        const { data } = await axios.get('http://localhost:5000/jobs');
+        const { data } = await axios.get('/jobs');
         if(data) {
           items = data;
         }
